@@ -4,47 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Звіти з Лабораторних Робіт</title>
+    <style>
+        /* Стиль для місця виведення інформації */
+        #output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 50px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <h1 align="center">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
     <p align="center">З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</p>
-    <p align="center">Студентки групи ІС-32 Бондар Марини Михайлівни</p>
+    <p align="center">
+        Студентки групи ІС-32 Бондар Марини Михайлівни
+        <img src="./images/3х4.jpg" alt="Фото" style="float: right; margin-left: 20px; margin-bottom: 20px; width: 120px; height: auto; ">
+    </p>
 
-   
-    <table align="center" border="1" cellpadding="10" cellspacing="0" width="100%">
+    <table align="center" border="1" cellpadding="10" cellspacing="0" width="100%" style="clear: both;">
         <tr>
-            <td align="center"><a href="https://marynabndr.github.io/IS-32_Bondar_lab1/"><button>Лабораторна робота №1</button></a></td>
-            <td align="center"><button>Лабораторна робота №2</button></td>
-            <td align="center"><button>Лабораторна робота №3</button></td>
-            <td align="center"><button>Лабораторна робота №4</button></td>
-            <td align="center"><button>Лабораторна робота №5</button></td>
-            <td align="center"><button>Лабораторна робота №6</button></td>
-            <td align="center"><button>Лабораторна робота №7</button></td>
-            <td align="center"><button>Лабораторна робота №8</button></td>
-            <td align="center"><button>Лабораторна робота №9</button></td>
+            <td align="center"><button id="lab1">Лабораторна робота №1</button></td>
+            <td align="center"><button id="lab2">Лабораторна робота №2</button></td>
+            <td align="center"><button id="lab3">Лабораторна робота №3</button></td>
+            <td align="center"><button id="lab4">Лабораторна робота №4</button></td>
+            <td align="center"><button id="lab5">Лабораторна робота №5</button></td>
+            <td align="center"><button id="lab6">Лабораторна робота №6</button></td>
+            <td align="center"><button id="lab7">Лабораторна робота №7</button></td>
+            <td align="center"><button id="lab8">Лабораторна робота №8</button></td>
+            <td align="center"><button id="lab9">Лабораторна робота №9</button></td>
         </tr>
     </table>
 
     <br>
 
-   
-    <table align="center" border="1" cellpadding="10" cellspacing="0" width="100%">
+    <!-- Нижня таблиця -->
+    <table id="bottomTable" align="center" border="1" cellpadding="10" cellspacing="0" width="100%">
         <tr>
-            <td width="20%" valign="top">
-                <p><a href="description.html"><button>Опис предметного середовища</button></a></p>
-                <p><button>Тема Мета Місце розташування ЛР №1</button></p>
-                <p><button>Структура документа</button></p>
-                <p><button>HTML-код таблиць</button></p>
-                <p><button>HTML-код списку</button></p>
-                <p><button>HTML-код зображення</button></p>
-                <p><button>Висновки</button></p>
+            <td width="20%" valign="top" id="sidebar">
+                
+                <p><button onclick="showContent('Опис предметного середовища')">Опис предметного середовища</button></p>
+                <p><button onclick="showContent('Тема Мета Місце розташування')">Тема Мета Місце розташування</button></p>
+                <p><button onclick="showContent('Структура документа')">Структура документа</button></p>
+                <p><button onclick="showContent('HTML-код таблиць')">HTML-код таблиць</button></p>
+                <p><button onclick="showContent('HTML-код списку')">HTML-код списку</button></p>
+                <p><button onclick="showContent('HTML-код зображення')">HTML-код зображення</button></p>
+                <p><button onclick="showContent('Висновки')">Висновки</button></p>
             </td>
-            <td valign="top" align="center">
-                <h3>Місце виведення інформації</h3>
+            <td valign="top">
+                <div id="output"></div>
             </td>
         </tr>
     </table>
 
+    <script>
+        // Зберігаємо унікальний контент для кожної лабораторної роботи
+        const labContent = {
+            lab1: {
+                'Опис предметного середовища': '<h1>Тема</h1><p>Магазин меблів для дому</p> <h1>Мета</h1><p>Надати користувачам можливість зручно переглядати асортимент меблів для дому за різними категоріями, зберігати товари у кошик і легко оформляти замовлення з вибором способу доставки та оплати. Вебзастосунок покликаний спростити процес вибору та купівлі меблів, забезпечуючи клієнтам комфортний та ефективний шопінг онлайн.</p><h1>Опис бізнес-логіки</h1><p></p><p>Вебзастосунок дозволяє користувачам:</p><ol><li>Переглядати асортимент товарів за категоріями</li><ul><li>Користувачі можуть переглядати всі доступні товари магазину через зручний і структурований каталог.</li><li>Кожна товарна позиція містить докладний опис, ціну та фото, що дозволяє користувачам отримати всю необхідну інформацію для ухвалення рішення про покупку.</li></ul><li>Додавати товари до кошика</li><ul><li>Кожен товар можна додати в кошик через спеціальну іконку.</li><li>У кошику користувачі можуть переглядати вибрані товари, редагувати кількість, видаляти позиції.</li></ul><li>Оформлювати замовлення</li><ul><li>Вебзастосунок дозволяє оформити замовлення, вибравши зручний спосіб оплати (онлайн, накладений платіж тощо) і тип доставки (кур’єрська доставка, самовивіз тощо).</li></ul></ol>',
+
+                'Тема Мета Місце розташування': '<h1>Тема</h1><p>СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ. РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.</p><h1>Мета</h1><p>придбати практичні навички роботи  з HTML-документом, таблицями, , зображеннями, посиланнями, списками, формами.Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.</p><h1>Місце розташування</h1><a href="https://github.com/marynabndr/IS-32_Bondar_lab1">Посилання на репозиторій ЛР1</a><br><a href="https://marynabndr.github.io/IS-32_Bondar_lab1/">Посилання на живу сторінку ЛР1</a>',
+               
+                'Структура документа': '<p>Структура документа для ЛР №1.</p><img src="https://via.placeholder.com/150" alt="Зображення">',
+                'HTML-код таблиць': '<h1>HTML-код таблиць для ЛР №1.</h1>',
+                'HTML-код списку': '<p>HTML-код списку для ЛР №1.</p>',
+                'HTML-код зображення': '<p>HTML-код зображення для ЛР №1.</p>',
+                'Висновки': '<p>Висновки для ЛР №1.</p>'
+            },
+            lab2: {
+                'Опис предметного середовища': '<p>Опис предметного середовища для ЛР №2.</p>',
+                'Тема Мета Місце розташування': '<p>Тема, мета та місце розташування ЛР №2.</p><a href="https://example.com">Посилання для ЛР №2</a>',
+                'Структура документа': '<p>Структура документа для ЛР №2.</p><img src="https://via.placeholder.com/150" alt="Зображення">',
+                'HTML-код таблиць': '<p>HTML-код таблиць для ЛР №2.</p>',
+                'HTML-код списку': '<p>HTML-код списку для ЛР №2.</p>',
+                'HTML-код зображення': '<p>HTML-код зображення для ЛР №2.</p>',
+                'Висновки': '<p>Висновки для ЛР №2.</p>'
+            },
+            lab3: {
+                'Опис предметного середовища': '<p>Опис предметного середовища для ЛР №3.</p>',
+                'Тема Мета Місце розташування': '<p>Тема, мета та місце розташування ЛР №3.</p><a href="https://example.com">Посилання для ЛР №3</a>',
+                'Структура документа': '<p>Структура документа для ЛР №3.</p><img src="https://via.placeholder.com/150" alt="Зображення">',
+                'HTML-код таблиць': '<p>HTML-код таблиць для ЛР №3.</p>',
+                'HTML-код списку': '<p>HTML-код списку для ЛР №3.</p>',
+                'HTML-код зображення': '<p>HTML-код зображення для ЛР №3.</p>',
+                'Висновки': '<p>Висновки для ЛР №3.</p>'
+            }
+            // Додаємо подібні об'єкти для інших лабораторних робіт...
+        };
+
+        let currentLab = 'lab1'; // За замовчуванням обрана ЛР1
+
+        // Функція для виведення HTML-контенту в блок output
+        function showContent(section) {
+            const content = labContent[currentLab][section];
+            document.getElementById('output').innerHTML = content;
+        }
+
+        // Додаємо обробники подій для кнопок лабораторних робіт
+        function updateLabDisplay(labNumber) {
+            currentLab = labNumber;
+            document.getElementById('output').innerHTML = `<h1>Лабораторна робота №${labNumber.charAt(labNumber.length - 1)}</h1>`;
+        }
+
+        document.getElementById('lab1').addEventListener('click', function() { updateLabDisplay('lab1'); });
+        document.getElementById('lab2').addEventListener('click', function() { updateLabDisplay('lab2'); });
+        document.getElementById('lab3').addEventListener('click', function() { updateLabDisplay('lab3'); });
+        document.getElementById('lab4').addEventListener('click', function() { updateLabDisplay('lab4'); });
+        document.getElementById('lab5').addEventListener('click', function() { updateLabDisplay('lab5'); });
+        document.getElementById('lab6').addEventListener('click', function() { updateLabDisplay('lab6'); });
+        document.getElementById('lab7').addEventListener('click', function() { updateLabDisplay('lab7'); });
+        document.getElementById('lab8').addEventListener('click', function() { updateLabDisplay('lab8'); });
+        document.getElementById('lab9').addEventListener('click', function() { updateLabDisplay('lab9'); });
+    </script>
+    <style>
+        button {
+    background-color: #2e364819; /* Зелений фон */
+    color: rgb(12, 13, 16); /* Білий текст */
+    padding: 10px 20px; /* Внутрішні відступи */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закруглені кути */
+    cursor: pointer; /* Показує курсор вказівник при наведенні */
+    font-size: 16px; /* Розмір шрифту */
+   
+}
+    </style>
+
 </body>
 </html>
+
+
