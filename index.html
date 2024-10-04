@@ -4,50 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Звіти з Лабораторних Робіт</title>
-    <style>
-        button {
-            width: 90%;
-            padding: 10px;
-            margin: 10px auto;
-            font-size: 16px;
-            border-radius: 30px;
-            border: 2px solid black;
-            text-align: center;
-            display: block;
-            background-color: #f0f0f0;
-            cursor: pointer;
-        }
-
-        .title {
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        #output {
-            border: 1px solid #ccc;
-            padding: 10px;
-            min-height: 50px;
-            margin-top: 20px;
-        }
-
-        table {
-            width: 100%;
-        }
-
-        /* Налаштування для контейнера бокової панелі */
-        #sidebar {
-            width: 20%;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1 align="center">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+    <h1 align="center">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ   <img src="./images/3х4.jpg" alt="Фото" style="float: right; margin-left: 20px; margin-bottom: 20px; width: 105px; height: auto;"></h1>
     <p align="center">З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</p>
     <p align="center">
         Студентки групи ІС-32 Бондар Марини Михайлівни
-        <img src="./images/3х4.jpg" alt="Фото" style="float: right; margin-left: 20px; margin-bottom: 20px; width: 120px; height: auto;">
+      
     </p>
 
     <table align="center" border="1" cellpadding="10" cellspacing="0" width="100%" style="clear: both;">
@@ -97,6 +61,22 @@
                 'Інші селектори': ' <h1>Інші селектори</h1><h1>Універсальний селектор</h1><p>Універсальний селектор (Universal selector) — селектор, що застосовується до всіх елементів на сторінці.</p><h1>CSS-код</h1> <img src="./images/universal_lab2.png" width="300"><h1>Результат</h1><p>Встановлює нульові відступи (margin і padding) для всіх елементів. Застосовує box-sizing: border-box, щоб включати відступи та рамки у загальну ширину й висоту елементів.</p><h1> Селектор атрибута</h1><p>Селектор атрибута (Attribute selector) — цей селектор дозволяє застосовувати стилі до елементів з певним атрибутом або значенням атрибута.</p><img src="./images/attribute_lab2-1.png" width="600"><h1>CSS-код</h1> <img src="./images/attribute_lab2.png" width="300"><h1>Результат</h1><img src="./images/attribute_lab2-2.png" width="200">',
                 'CSS: Шрифти Текст Таблиці Фон Контур Списки CSS Просунутий': '<h1>Списки</h1><h1>Програмний HTML-код</h1><img src="./images/list_lab2-1.png" width="400"><h1>CSS-код</h1><img src="./images/list_lab2.png" width="300"><h1>Рузультат</h1><img src="./images/list_lab2-2.png" width="400"><h1>Фон, шрифти</h1><h1>CSS-код</h1><img src="./images/font_lab2.png" width="300">',
                 'ВИСНОВКИ': '<h1>Висновки </h1><p>В ході виконання даної лаборатоної роботи я навчилася працювати з каскадними таблицями стилів.</p><p>На практиці застосувала</p><ul><li>селектори</li><li>ідентифікатори</li><li>списки</li><li>властивості кольорів та фонів</li><li>зовнішні та внутрішні відступи</li><li>плаваючі елементи</li><li>оформлення текстових елементів</li></ul>'
+            },
+            lab3: {
+
+                'Тема, мета ЛР №3 Місце розташування сайту, звіту':'',
+                'ЗАВДАННЯ №1. Зовнішній вигляд макету':'',
+                'ЗАВДАННЯ №2':'',
+                'Фіксована таблична верстка':'',
+                'Гумова таблична верстка':'',
+                'Фіксована блокова верстка':'',
+                'Гумова блокова верстка':'',
+                'ЗАВДАННЯ №3 FLEXBOX':'',
+                'Скріншот сторіки (Flexbox)':'',
+                'HTML-код (Flexbox)':'',
+                'CSS-код (Flexbox)':'',
+                'ВИСНОВКИ':''
+
             }
             
         };
@@ -136,9 +116,26 @@
                     <button onclick="showContent('CSS: Шрифти Текст Таблиці Фон Контур Списки CSS Просунутий')">CSS: Шрифти Текст Таблиці Фон Контур Списки CSS Просунутий</button>
                     <button onclick="showContent('ВИСНОВКИ')">ВИСНОВКИ</button>
                 `;
+            } else if (currentLab === 'lab3') {
+                buttonsHTML = `
+                    <button onclick="showContent('Тема, мета ЛР №3 Місце розташування сайту, звіту')">Тема, мета ЛР №3 Місце розташування сайту, звіту</button>
+                    <button onclick="showContent('ЗАВДАННЯ №1. Зовнішній вигляд макету')">ЗАВДАННЯ №1. Зовнішній вигляд макету</button>
+                    <button onclick="showContent('ЗАВДАННЯ №2')">ЗАВДАННЯ №2</button>
+                    <button onclick="showContent('Фіксована таблична верстка')">Фіксована таблична верстка</button>
+                    <button onclick="showContent('Гумова таблична верстка')">Гумова таблична верстка</button>
+                    <button onclick="showContent('Фіксована блокова верстка')">Фіксована блокова верстка</button>
+                    <button onclick="showContent('Гумова блокова верстка')">Гумова блокова верстка</button>
+                    <button onclick="showContent('ЗАВДАННЯ №3 FLEXBOX')">ЗАВДАННЯ №3 FLEXBOX</button>
+                    <button onclick="showContent('Скріншот сторіки (Flexbox)')">Скріншот сторіки (Flexbox)</button>
+                    <button onclick="showContent('HTML-код (Flexbox)')">HTML-код (Flexbox)</button>
+                    <button onclick="showContent('CSS-код (Flexbox)')">CSS-код (Flexbox)</button>
+                    <button onclick="showContent('ВИСНОВКИ')">ВИСНОВКИ</button>
+                `;
             }
             sidebar.innerHTML = buttonsHTML;
         }
+
+        
 
         // Оновлюємо відображення лабораторної роботи
         function updateLabDisplay(labNumber) {
@@ -150,6 +147,7 @@
         // Додаємо обробники подій для кнопок лабораторних робіт
         document.getElementById('lab1').addEventListener('click', () => updateLabDisplay('lab1'));
         document.getElementById('lab2').addEventListener('click', () => updateLabDisplay('lab2'));
+        document.getElementById('lab3').addEventListener('click', () => updateLabDisplay('lab3'));
         
        
     </script>

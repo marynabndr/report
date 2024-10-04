@@ -1,0 +1,47 @@
+body {
+    background-color: #F2EDDC; /* Чорний фон для всього тіла сторінки */
+    color: #593A28; /* Колір шрифта для всіх елементів */
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid #F2EDDC;
+    text-align: center;
+    display: block;
+    background-color: #BFBC8A; /* Світло-червоний */
+    cursor: pointer;
+    color: #593A28; /* Колір шрифта для кнопок */
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #593A28; /* Колір шрифта */
+}
+
+#output {
+    border: 1px solid #F2EDDC;
+    padding: 10px;
+    min-height: 50px;
+    margin-top: 20px;
+    background-color: #F2EDDC; /* Світло-блакитний */
+    color: #593A28; /* Колір шрифта */
+}
+
+table {
+    width: 100%;
+    background-color: #D9D2B0; /* Світло-жовтий */
+    color: #593A28; /* Колір шрифта для таблиць */
+    border: 1px solid #F2EDDC; /* Колір рамок таблиць */
+}
+
+/* Налаштування для контейнера бокової панелі */
+#sidebar {
+    width: 20%;
+    background-color: #D9D2B0; /* Світло-сірий */
+    color: #593A28; /* Колір шрифта для бокової панелі */
+}
