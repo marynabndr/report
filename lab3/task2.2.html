@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гумова таблична верстка</title>
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+        }
+
+        html, body {
+            height: 100%; 
+        }
+    
+        table {
+            width: 100%; 
+            height: 100%; 
+            margin: 0;
+        }
+
+        td {
+            padding: 0;
+            text-align: center;
+            vertical-align: middle; /* Вертикальне вирівнювання по центру */
+        }
+    
+        .header, .footer {
+            background-color: #FFD700;
+            height: 15%; 
+        }
+    
+        .white-container {
+        top: 3vh; 
+        left: 10vw;
+        position: absolute;
+        }
+
+        .white-rectangle {
+        background-color: white;
+        border: 1px solid black;
+        height: 8vh;
+        width: 30vw;
+        }
+
+
+        .sidebar {
+            background-color: #1E90FF;
+            width: 20%; 
+            height: 70%; 
+        }
+    
+        .white-area {
+            background-color: #FFFFFF;
+            border: 1px solid black;
+            width: 30%; 
+            height: 70%; 
+        }
+    
+        .blue-area {
+            background-color: #1E90FF;
+            width: 30%; 
+            height: 70%; 
+        }
+    
+        .top-bar {
+            background-color: #FF6347;
+            height: 15%; 
+            width: 100%; 
+        }
+
+        .content-area {
+            width: 100%; 
+            height: 100%; 
+            border-spacing: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table class="main">
+        <tr>
+            <td colspan="2" class="header">
+                <div class="white-container">
+                    <div class="white-rectangle"></div>
+                </div>
+              1
+            </td>
+        </tr>
+        <tr>
+            <td class="sidebar">2</td>
+            <td>
+                <table class="content-area">
+                    <tr>
+                        <td colspan="2" class="top-bar"></td>
+                    </tr>
+                    <tr>
+                        <td class="white-area">3</td>
+                        <td class="blue-area">4</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footer">5</td>
+        </tr>
+    </table>
+</body>
+</html>

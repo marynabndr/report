@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фіксована блокова верстка</title>
+    <style>
+       body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            width: 1550px; 
+            height: 750px; 
+            display: flex;
+            flex-direction: column;
+           
+        }
+
+        .header, .footer {
+            background-color: #FFD700;
+            height: 80px;
+            position: relative;
+        }
+
+        .white-rectangle {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            width: 320px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .main {
+            display: flex;
+            flex-grow: 1;
+            gap: 20px; 
+        }
+
+        .sidebar {
+            background-color: #1E90FF;
+            width: 320px;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+
+        .top-bar {
+            background-color: #FF6347;
+            height: 80px; 
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-grow: 1;
+            gap: 20px; 
+        }
+
+        .white-area {
+            background-color: white;
+            flex-grow: 1;
+            border: 1px solid black;
+        }
+
+        .blue-area {
+            background-color: #1E90FF;
+            width: 600px;
+            height: 121%;
+            border: 1px solid black;
+        }
+
+        .bottom-bar {
+            background-color: #FF6347;
+            height: 80px;
+            width: 597px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="white-rectangle"></div>
+            1
+        </div>
+
+        <div class="main">
+            <div class="sidebar">2</div>
+
+            <div class="content-area">
+                <div class="top-bar"></div>
+
+                <div class="content">
+                    <div class="white-area">3</div>
+                    <div class="blue-area">4</div>
+                </div>
+
+                <div class="bottom-bar"></div>
+            </div>
+        </div>
+
+        <div class="footer">5</div>
+    </div>
+</body>
+</html>
