@@ -1,0 +1,138 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; /* поля і відступи в ширину і висоту елементів */
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    padding: 10px; 
+    background-color: #f8f9fa; 
+}
+
+header {
+    text-align: center; /
+}
+
+h1 {
+    color: #000; 
+    background-color: #f9b500; 
+    margin-bottom: 20px; 
+}
+
+.features {
+    list-style: none; 
+    display: flex; /*гнучкий макет  */
+    justify-content: center; /*елементи списку по центру */
+    gap: 40px; 
+}
+
+.features li {
+    width: 100%; 
+    background-color: #f9b500; 
+    padding: 20px 20px; 
+    border-radius: 5px; 
+}
+
+.training-process {
+    margin: 40px 0; 
+}
+
+h2 {
+    margin-left: 20px; 
+    margin-bottom: 20px; 
+}
+
+.steps {
+    display: flex; 
+    justify-content: space-around; /* Рівномірно розподіляє елементи по ширині */
+    gap: 15px; 
+}
+
+.step {
+    background-color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+    border-radius: 5px; 
+    width: 50%; 
+    border: 1px solid black;
+}
+
+.step h3 {
+    margin-bottom: 10px; 
+    color: #f9b500; 
+}
+
+.step img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; /* Зберігає пропорції зображення, обрізаючи його при необхідності */
+    border-radius: 5px; 
+}
+
+.training-levels {
+    margin-top: 40px; 
+}
+
+.level {
+    background-color: #fff; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+    display: flex; /* Розташування елементів в рядок */
+    align-items: center; /* Вертикальне вирівнювання по центру */
+    text-align: center; 
+}
+
+.level img {
+    width: 40%; 
+    margin-right: 100px; 
+    border-radius: 5px; 
+}
+
+.level h3, .level p {
+    width: 60%; 
+    margin: 0; 
+}
+
+footer {
+    display: flex; 
+    justify-content: space-between; /* Розташування елементів футера по краях */
+    align-items: center; /* Вирівнює елементи футера вертикально */
+    padding: 20px; 
+    background-color: #000000; 
+    color: #fff; 
+}
+
+footer p {
+    margin: 0; 
+}
+
+.social-icons {
+    list-style: none; 
+    display: flex; 
+    justify-content: flex-end; /*іконки праворуч */
+    gap: 20px; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.social-icons li {
+    display: inline-block; /* елементи списку як рядкові блоки */
+}
+
+.social-icons li a {
+    display: inline-block; /* Посилання відображається як блок */
+    width: 60px; 
+    height: 60px; 
+    background-color: #fff; 
+}
+
+.social-icons li img {
+    width: 100%; 
+    height: 100%; 
+    display: block; /*зображення як блок */
+    background-color: #fff; 
+    
+}
