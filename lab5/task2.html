@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./лампочка.png" type="image/png">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <h1>Завдання 2</h1>
+    <script>
+        function makeTransaction(quantity, pricePerDroid, customerCredits) {
+            const totalPrice = quantity * pricePerDroid;
+            if(totalPrice>customerCredits){
+                return "Insufficient funds!";
+            } 
+            else {
+            return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+            }
+            
+        }
+        console.log(makeTransaction(3, 100, 350)); 
+        console.log(makeTransaction(5, 100, 400));
+    </script>
+</body>
+</html>

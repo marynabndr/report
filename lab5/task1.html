@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./лампочка.png" type="image/png">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <h1>Завдання 1</h1>
+    <script>
+        function getShippingMessage( country, price, deliveryFee){
+            const totalPrice = price + deliveryFee;
+            return `Shipping to ${country} will cost ${totalPrice} credits`;
+        }
+        console.log(getShippingMessage("Ukraine", 100, 20));
+        console.log(getShippingMessage("Germany", 150, 25));
+        console.log(getShippingMessage("Italy", 200, 30));
+
+    </script>
+</body>
+</html>
+

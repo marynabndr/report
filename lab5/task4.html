@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./лампочка.png" type="image/png">
+    <title>Завдання 4</title>
+</head>
+<body>
+    <h1>Завдання 4</h1>
+    <label for="arrayLength">Введіть кількість елементів:</label>
+    <input type="number" id="arrayLength">
+    <button onclick="handleProcessArray()">Створити та обробити масив</button>
+
+    <script>
+       function createArray(length){
+        const array = [];
+        for (let i = 0; i < length; i++){
+            array.push(Math.floor(Math.random() * 100));
+        }
+        return array;
+       }
+
+       function sumEvenIndexElements(array) {  //сума ел. з парними індексами
+        return array.reduce((sum, element, index) => 
+        {
+            return index % 2 === 0 ? sum + element : sum;
+        }, 0);
+       }
+
+       function findMaxElement(array) { //макс. ел. та його індекс
+        let maxElement = array[0];
+        let maxIndex = 0;
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > maxElement) {
+                maxElement = array[i];
+                maxIndex = i;
+            }
+        }
+        return { maxElement, maxIndex };
+       }
+
+       function findMinElementOddIndex(array) { //мін. ел. та його індекс серед ел. з непарними індексами
+        let minElement = null;
+        let minIndex = -1;
+        for (let i = 1; i < array.length; i += 2) {
+            if (minElement === null || array[i] < minElement) {
+                minElement = array[i];
+                minIndex = i;
+            }
+        }
+        return { minElement, minIndex };
+       }
+
+       function sortArrayAscending(array) { //у порядку зростання
+        return array.slice().sort((a, b) => a - b); 
+       }
+       
+
+       function processArray(length) {
+        const array = createArray(length);
+        const sumEven = sumEvenIndexElements(array);
+        const { maxElement, maxIndex } = findMaxElement(array);
+        const { minElement, minIndex } = findMinElementOddIndex(array);
+        const sortedArray = sortArrayAscending(array);
+
+        console.log("Вхідний масив:", array);
+        console.log("Сума елементів з парними індексами:", sumEven);
+        console.log("Максимальний елемент:", maxElement, "з індексом:", maxIndex);
+        console.log("Мінімальний елемент серед непарних індексів:", minElement, "з індексом:", minIndex);
+        console.log("Відсортований масив:", sortedArray);
+       }
+
+       function handleProcessArray() {
+        const length = parseInt(document.getElementById("arrayLength").value);
+        if (isNaN(length) || length <= 0) {
+            alert("Будь ласка, введіть коректне число.");
+            return;
+        }
+        processArray(length);
+       }
+    </script>
+</body>
+</html>
