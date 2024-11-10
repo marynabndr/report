@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6</title>
+</head>
+<body>
+    <h1>Оновлений список медикаментів</h1>
+    <script>
+        const medicines = [
+        { name: "Noshpa", price: 170 },
+        { name: "Analgin", price: 55 },
+        { name: "Quanil", price: 310 },
+        { name: "Alphacholine", price: 390 },
+        ];
+            function applyDiscountAndAddId(medicines){
+                return medicines.map((medicine, index) => {
+                    const discountedPrice = medicine.price > 300 ? medicine.price * 0.7: medicine.price;
+                    return {
+                        ...medicine,
+                        id: index + 1, price: discountedPrice
+                    };
+                });
+            }
+
+            const updateMedicines = applyDiscountAndAddId(medicines);
+            console.log(updateMedicines);
+    </script>
+</body>
+</html>

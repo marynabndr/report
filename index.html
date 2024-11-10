@@ -40,7 +40,10 @@
     </table>
 
 
-
+    
+    
+    
+    <!-- <a href="./lab6/task8.html">Завдання 8</a><br><img src="./lab6/images_lab6/8-1.png" alt="код" width="700"><br><img src="./lab6/images_lab6/8-2.png" alt="результат" width="700"> -->
 
     <script>
         // контент для кожної лабораторної роботи
@@ -100,7 +103,20 @@
                 'ЗАВДАННЯ 4':'<a href="./lab5/task4.html">Завдання 4</a><br><img src="./lab5/images.lab5/4-1.png" alt="код" width="700"><br><img src="./lab5/images.lab5/4-2.png" alt="результат" width="700"><br><img src="./lab5/images.lab5/4-3.png" alt="код" width="700"><br><img src="./lab5/images.lab5/4-4.png" alt="код" width="700"><br>',
                 'ЗАВДАННЯ 5':'<a href="https://marynabndr.github.io/IS-32_-Bondar_Maryna_TheCozyCorner/">Завдання 5</a><br><img src="./lab5/images.lab5/5-1.png" alt="код" width="700"><br><img src="./lab5/images.lab5/5-2.png" alt="код" width="700"><br><img src="./lab5/images.lab5/5-3.png" alt="результат" width="700">',
                 'ВИСНОВКИ':'<p>В ході виконання даної лабораторної роботи я набула практичні навички роботи з конструкціями мови JS, масивами та функціями у js-сценаріях. Реалізазувала програму засобами мови JAVASCRIPT.</p>',
+                },
+
+                lab6: {
+
+                'Тема, мета ЛР №6 Місце розташування сайту, звіту':'<h1>Тема:</h1><p>ОБ`ЄКТ. МЕТОДИ ОБ`ЄКТА. МАСИВ ОБ`ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ`ЄКТІВ. CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК КОЛБЕКИ.</p><h1>Мета:</h1><p>придбати практичні навички роботи з об`єктами. Методи об`єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засовами мови JAVASCRIPT</p><h2>Місце розташування сайту</h2> <a href="https://github.com/marynabndr/IS-32_-Bondar_Maryna_TheCozyCorner">Посилання на репозиторій</a><br><a href="https://marynabndr.github.io/IS-32_-Bondar_Maryna_TheCozyCorner/">Посилання на живу сторінку</a>',
+                'ЗАВДАННЯ 2':'<a href="./lab6/task2.html">Завдання 2</a><br><img src="./lab6/images_lab6/2-1.png" alt="код" width="700"><br><img src="./lab6/images_lab6/2-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 4':'<a href="./lab6/task4.html">Завдання 4</a><br><img src="./lab6/images_lab6/4-1.png" alt="код" width="700"><br><img src="./lab6/images_lab6/4-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 6':'<a href="./lab6/task6.html">Завдання 6</a><br><img src="./lab6/images_lab6/6-1.png" alt="код" width="700"><br><img src="./lab6/images_lab6/6-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 8':'<a href="./lab6/task8.html">Завдання 8</a><br><img src="./lab6/images_lab6/8-1.png" alt="код" width="700"><br><img src="./lab6/images_lab6/8-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 9':'',
+                'ЗАВДАННЯ 10':'',
+                'ВИСНОВКИ':'<p>У ході виконання лабораторної роботи були набуті практичні навички роботи з об`єктами та їх методами в JavaScript. Вивчено принципи використання функцій зворотного виклику (callback), а також особливості стрілочних функцій, які є зручними і компактними для написання функцій, що використовуються як колбеки.</p>',
                 }
+
                             
         };
 
@@ -172,6 +188,17 @@
                     <button onclick="showContent('ЗАВДАННЯ 3')">ЗАВДАННЯ 3</button>
                     <button onclick="showContent('ЗАВДАННЯ 4')">ЗАВДАННЯ 4</button>
                     <button onclick="showContent('ЗАВДАННЯ 5')">ЗАВДАННЯ 5</button>
+                    <button onclick="showContent('ВИСНОВКИ')">ВИСНОВКИ</button>
+                `;
+            } else if (currentLab === 'lab6') {
+                buttonsHTML = `
+                    <button onclick="showContent('Тема, мета ЛР №6 Місце розташування сайту, звіту')">Тема, мета ЛР №6 Місце розташування сайту, звіту</button>
+                    <button onclick="showContent('ЗАВДАННЯ 2')">ЗАВДАННЯ 2</button>
+                    <button onclick="showContent('ЗАВДАННЯ 4')">ЗАВДАННЯ 4</button>
+                    <button onclick="showContent('ЗАВДАННЯ 6')">ЗАВДАННЯ 6</button>
+                    <button onclick="showContent('ЗАВДАННЯ 8')">ЗАВДАННЯ 8</button>
+                    <button onclick="showContent('ЗАВДАННЯ 9')">ЗАВДАННЯ 9</button>
+                    <button onclick="showContent('ЗАВДАННЯ 10')">ЗАВДАННЯ 10</button>
                     <button onclick="showContent('ВИСНОВКИ')">ВИСНОВКИ</button>
                 `;
             }

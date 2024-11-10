@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <p>Введіть ідентифікатор товару для отримання деталей:</p>
+    <input type="number" id="productIdInput" placeholder="Ідентифікатор товару" />
+    <button onclick="fetchProductDetails()">Отримати деталі</button>
+
+    <script>
+        function getProductDetails(productId, successCallback, errorCallback) {
+            const productsDatabase = {
+                1: { id: 1, name: "Диван", price: 15000 },
+                2: { id: 2, name: "Крісло", price: 8000 },
+                3: { id: 3, name: "Стіл", price: 12000 },
+                4: { id: 4, name: "Шафа", price: 20000 },
+                5: { id: 5, name: "Тумба", price: 6000 }
+            };
+
+            setTimeout(() => {
+                const product = productsDatabase[productId];
+                if (product) {
+                    successCallback(product);
+                } else {
+                    errorCallback(`Товар з ідентифікатором ${productId} не знайдено.`);
+                }
+            }, 1000);
+        }
+
+        function fetchProductDetails() {
+            const productId = document.getElementById("productIdInput").value;
+            getProductDetails(
+                parseInt(productId),
+                (product) => console.log("Деталі товару:", product),
+                (errorMessage) => console.log("Помилка:", errorMessage)
+            );
+        }
+    </script>
+</body>
+</html>
