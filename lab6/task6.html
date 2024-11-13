@@ -18,8 +18,9 @@
                 return medicines.map((medicine, index) => {
                     const discountedPrice = medicine.price > 300 ? medicine.price * 0.7: medicine.price;
                     return {
-                        ...medicine,
-                        id: index + 1, price: discountedPrice
+                        ...medicine, // Копіює всі властивості з об’єкта `medicine`
+                        id: index + 1, 
+                        price: discountedPrice
                     };
                 });
             }

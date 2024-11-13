@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 10</title>
+</head>
+<body>
+    <h1>Перевірка правильності закриття дужок</h1>
+    <script>
+        function checkBrackets(str) {
+        const stack = []; //Стек для зберігання відкриваючих дужок
+        
+        const brackets = { //Пари відкриваючих і закриваючих дужок
+            '(': ')',
+            '{': '}',
+            '[': ']'
+        };
+
+        for (let char of str) {
+            if (brackets[char]) { // Якщо символ є відкриваючою дужкою
+            stack.push(char);   // Додаємо її до стеку
+            }
+            
+            else if (Object.values(brackets).includes(char)) { // Якщо символ є закриваючою дужкою
+            const lastBracket = stack.pop();                 // Витягуємо останню відкриваючу дужку зі стеку
+            if (brackets[lastBracket] !== char) {            // Перевіряємо, чи відповідає вона поточній закриваючій дужці
+                return false;                                  // Якщо дужки не співпадають, повертаємо false
+            }
+            }
+        }
+        // Перевіряємо, чи порожній стек. Якщо так — усі дужки закриті коректно
+        return stack.length === 0;
+        }
+
+        console.log(checkBrackets("someFn() { return [1, 2, 3]; }")); // true
+        console.log(checkBrackets("someFn() { return [1, 2, 3; }"));  // false
+        console.log(checkBrackets("someFn() { return [1, 2, (3)]; }")); // true
+        console.log(checkBrackets("someFn(() { return [1, 2, 3]; }")); // false
+    </script>
+</body>
+</html>

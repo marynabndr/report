@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 9</title>
+</head>
+<body>
+    <h1>Повернення об'єкту, в якому вказано кількість тегів</h1>
+    <script>
+            const tweets = [
+        { id: "000", likes: 5, tags: ["js", "nodejs"] },
+        { id: "001", likes: 2, tags: ["html", "css"] },
+        { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+        { id: "003", likes: 8, tags: ["css", "react"] },
+        { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+        ];
+
+         const tagCount = tweets.reduce((acc, tweet) => {  // Ініціалізуємо підрахунок тегів через метод reduce з початковим об'єктом {}
+            tweet.tags.forEach(tag => {                    // Проходимо по кожному тегу в поточному твіті
+                 acc[tag] = (acc[tag] || 0) + 1;           // Якщо тег вже є в acc, збільшуємо його значення на 1, інакше встановлюємо на 1
+             });
+            return acc;
+         }, {});
+
+            console.log(tagCount);
+    </script>
+</body>
+</html>
