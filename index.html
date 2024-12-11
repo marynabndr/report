@@ -39,6 +39,11 @@
         </tr>
     </table>
 
+
+  
+    
+     
+
     <script>
         // контент для кожної лабораторної роботи
         const labContent = {
@@ -109,13 +114,27 @@
                 'ЗАВДАННЯ 9':'<a href="./lab6/task9.html">Завдання 9</a><br><img src="./lab6/images_lab6/9-1.png" alt="код" width="700"><br><img src="./lab6/images_lab6/9-2.png" alt="результат" width="700">',
                 'ЗАВДАННЯ 10':'<a href="./lab6/task10.html">Завдання 10</a><br><img src="./lab6/images_lab6/10-1.png" alt="код" width="700"><br><img src="./lab6/images_lab6/10-2.png" alt="результат" width="700"> ',
                 'ВИСНОВКИ':'<p>У ході виконання лабораторної роботи були набуті практичні навички роботи з об`єктами та їх методами в JavaScript. Вивчено принципи використання функцій зворотного виклику (callback), а також особливості стрілочних функцій, які є зручними і компактними для написання функцій, що використовуються як колбеки.</p>',
-                }
+                },
+
+                lab7: {
+
+                'Тема, мета ЛР №7 Місце розташування сайту, звіту':'<h1>Тема:</h1><p>КЛАСИ. ОБ`ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM). ПОДІЇ. ОБ`ЄКТ ПОДІЇ. ДЕЛЕГУВАННЯ ПОДІЙ. </p><h1>Мета:</h1><p>придбати практичні навички роботи з об`єктами. Методи об`єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки.. Реалізація програм засовами мови JAVASCRIPT</p><h2>Місце розташування сайту</h2> <a href="https://github.com/marynabndr/IS-32_-Bondar_Maryna_TheCozyCorner">Посилання на репозиторій</a><br><a href="https://marynabndr.github.io/IS-32_-Bondar_Maryna_TheCozyCorner/">Посилання на живу сторінку</a>',
+                'ЗАВДАННЯ 2':'<a href="./lab7/task2.html">Завдання 2</a><br><img src="./lab7/images/2-1.png" alt="код" width="700"><br><img src="./lab7/images/2-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 4':'<a href="./lab7/task4.html">Завдання 4</a><br><img src="./lab7/images/4-1.png" alt="код" width="700"><br><img src="./lab7/images/4-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 6':'<a href="./lab7/task6.html">Завдання 6</a><br><img src="./lab7/images/6-1.png" alt="код" width="700"><br><img src="./lab7/images/6-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 7':'<a href="./lab7/task7.html">Завдання 7</a><br><img src="./lab7/images/7-1.png" alt="код" width="700"><br><img src="./lab7/images/7-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 8':'<a href="./lab7/task8.html">Завдання 8</a><br><img src="./lab7/images/8-1.png" alt="код" width="700"><br><img src="./lab7/images/8-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 9':'<a href="./lab7/task9.html">Завдання 9</a><br><img src="./lab7/images/9-1.png" alt="код" width="700"><br><img src="./lab7/images/9-2.png" alt="результат" width="700">',
+                'ЗАВДАННЯ 10':'<a href="./lab7/task10.html">Завдання 10</a><br><img src="./lab7/images/10-1.png" alt="код" width="700"><br><img src="./lab7/images/10-2.png" alt="код" width="700"><br><img src="./lab7/images/10-3.png" alt="результат" width="700">',
+                'ВИСНОВКИ':'<p>В ході виконання даної лабораторної роботи я придбала  практичні навички роботи з об`єктами. Та ознайомилася з такими Методи об`єкта.. Callback. Стрілочні функції. Стрілочні функції як колбеки..  Реалізація програм засовами мови JAVASCRIPT</p>',
+                } 
 
                             
         };
 
         let currentLab = 'lab1'; 
 
+        
         // Функція для виведення HTML-контенту в блок output
         function showContent(section) {
             const content = labContent[currentLab][section];
@@ -190,6 +209,18 @@
                     <button onclick="showContent('ЗАВДАННЯ 2')">ЗАВДАННЯ 2</button>
                     <button onclick="showContent('ЗАВДАННЯ 4')">ЗАВДАННЯ 4</button>
                     <button onclick="showContent('ЗАВДАННЯ 6')">ЗАВДАННЯ 6</button>
+                    <button onclick="showContent('ЗАВДАННЯ 8')">ЗАВДАННЯ 8</button>
+                    <button onclick="showContent('ЗАВДАННЯ 9')">ЗАВДАННЯ 9</button>
+                    <button onclick="showContent('ЗАВДАННЯ 10')">ЗАВДАННЯ 10</button>
+                    <button onclick="showContent('ВИСНОВКИ')">ВИСНОВКИ</button>
+                `;
+            } else if (currentLab === 'lab7') {
+                buttonsHTML = `
+                    <button onclick="showContent('Тема, мета ЛР №7 Місце розташування сайту, звіту')">Тема, мета ЛР №7 Місце розташування сайту, звіту</button>
+                    <button onclick="showContent('ЗАВДАННЯ 2')">ЗАВДАННЯ 2</button>
+                    <button onclick="showContent('ЗАВДАННЯ 4')">ЗАВДАННЯ 4</button>
+                    <button onclick="showContent('ЗАВДАННЯ 6')">ЗАВДАННЯ 6</button>
+                    <button onclick="showContent('ЗАВДАННЯ 7')">ЗАВДАННЯ 7</button>
                     <button onclick="showContent('ЗАВДАННЯ 8')">ЗАВДАННЯ 8</button>
                     <button onclick="showContent('ЗАВДАННЯ 9')">ЗАВДАННЯ 9</button>
                     <button onclick="showContent('ЗАВДАННЯ 10')">ЗАВДАННЯ 10</button>
